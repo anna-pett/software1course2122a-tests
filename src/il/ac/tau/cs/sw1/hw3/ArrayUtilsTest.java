@@ -157,6 +157,9 @@ public class ArrayUtilsTest {
 		adjMatrix = new int[][]{{0}};
 		assertEquals(0, ArrayUtils.findShortestPath(adjMatrix, 0, 0));
 		
+		adjMatrix = new int[][]{{0,0,0}, {0,0,1}, {0,1,0}};
+		assertEquals(-1, ArrayUtils.findShortestPath(adjMatrix, 2, 0));
+		
 	}
 
 }
