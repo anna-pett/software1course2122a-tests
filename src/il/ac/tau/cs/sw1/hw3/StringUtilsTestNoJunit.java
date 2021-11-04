@@ -2,6 +2,8 @@
 public class StringUtilsTestNoJunit {
 	
 public static void testFindSortedSequence() {
+	
+//		assuming correct input
 		
 		System.out.println("".equals(StringUtils.findSortedSequence("")));
 		System.out.println("".equals(StringUtils.findSortedSequence("   ")));
@@ -28,9 +30,11 @@ public static void testFindSortedSequence() {
 
 	public static void testIsEditDistanceOne() {
 		
-		System.out.println(false == StringUtils.isEditDistanceOne(null, ""));
-		System.out.println(false == StringUtils.isEditDistanceOne("", null));
-		System.out.println(false == StringUtils.isEditDistanceOne(null, null));
+//		assuming correct input
+		
+//		System.out.println(false == StringUtils.isEditDistanceOne(null, ""));
+//		System.out.println(false == StringUtils.isEditDistanceOne("", null));
+//		System.out.println(false == StringUtils.isEditDistanceOne(null, null));
 		System.out.println(true == StringUtils.isEditDistanceOne("", ""));
 		
 //		isEditDistanceOne ("dog","god") -> false

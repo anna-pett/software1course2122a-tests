@@ -9,6 +9,8 @@ public class StringUtilsTest {
 	@Test
 	public void testFindSortedSequence() {
 		
+//		assuming correct input
+		
 		assertEquals("", StringUtils.findSortedSequence(""));
 		assertEquals("", StringUtils.findSortedSequence("   "));
 		
@@ -34,9 +36,11 @@ public class StringUtilsTest {
 	@Test
 	public void testIsEditDistanceOne() {
 		
-		assertEquals(false, StringUtils.isEditDistanceOne(null, ""));
-		assertEquals(false, StringUtils.isEditDistanceOne("", null));
-		assertEquals(false, StringUtils.isEditDistanceOne(null, null));
+//		assuming correct input
+		
+//		assertEquals(false, StringUtils.isEditDistanceOne(null, ""));
+//		assertEquals(false, StringUtils.isEditDistanceOne("", null));
+//		assertEquals(false, StringUtils.isEditDistanceOne(null, null));
 		assertEquals(true, StringUtils.isEditDistanceOne("", ""));
 		
 //		isEditDistanceOne ("dog","god") -> false

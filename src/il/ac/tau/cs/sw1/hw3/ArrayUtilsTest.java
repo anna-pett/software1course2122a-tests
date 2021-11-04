@@ -8,6 +8,8 @@ public class ArrayUtilsTest {
 
 	@Test
 	public void testShiftArrayCyclic() {
+		
+//		assuming correct input
 
 //		shiftArrayCyclic([1, 2, 3, 4, 5],-1, 'R') -> [2,3,4,5,1]
 		int[] arr = {1, 2, 3, 4, 5};
@@ -68,6 +70,8 @@ public class ArrayUtilsTest {
 
 	@Test
 	public void testFindShortestPath() {
+		
+//		assuming correct input
 		
 //		findShortestPath([[0,0,0],[0,0,0],[0,0,0]],0,1) -> -1
 		int[][] adjMatrix = new int[][]{{0,0,0}, {0,0,0}, {0,0,0}};
@@ -140,6 +144,18 @@ public class ArrayUtilsTest {
 								{0,0,0,0,1,0,0,1},
 								{0,0,0,1,1,0,0,0}};
 		assertEquals(4, ArrayUtils.findShortestPath(adjMatrix, 3, 7));
+		
+		adjMatrix = new int[][]{{0,1,0}, {1,0,0}, {0,0,0}};
+		assertEquals(-1, ArrayUtils.findShortestPath(adjMatrix, 0, 2));
+		
+		adjMatrix = new int[][]{{0,1,1,0}, {1,0,1,0}, {1,1,0,0}, {0,0,0,0}};
+		assertEquals(-1, ArrayUtils.findShortestPath(adjMatrix, 2, 3));
+		
+		adjMatrix = new int[][]{{1}};
+		assertEquals(0, ArrayUtils.findShortestPath(adjMatrix, 0, 0));
+		
+		adjMatrix = new int[][]{{0}};
+		assertEquals(0, ArrayUtils.findShortestPath(adjMatrix, 0, 0));
 		
 	}
 
