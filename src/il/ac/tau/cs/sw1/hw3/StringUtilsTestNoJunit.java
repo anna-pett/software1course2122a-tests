@@ -8,10 +8,10 @@ public static void testFindSortedSequence() {
 		System.out.println("".equals(StringUtils.findSortedSequence("")));
 		System.out.println("".equals(StringUtils.findSortedSequence("   ")));
 		
-//		findSortedSequence (�to be or not to be�) -> "not to"
+//		findSortedSequence ("to be or not to be") -> "not to"
 		System.out.println("not to".equals(StringUtils.findSortedSequence("to be or not to be")));
 		
-//		findSortedSequence ("my mind is an empty zoo�) -> "an empty zoo"
+//		findSortedSequence ("my mind is an empty zoo") -> "an empty zoo"
 		System.out.println("an empty zoo".equals(StringUtils.findSortedSequence("my mind is an empty zoo")));
 		
 //		findSortedSequence ("") -> ""

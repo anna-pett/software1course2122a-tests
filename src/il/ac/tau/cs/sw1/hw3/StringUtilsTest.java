@@ -14,10 +14,10 @@ public class StringUtilsTest {
 		assertEquals("", StringUtils.findSortedSequence(""));
 		assertEquals("", StringUtils.findSortedSequence("   "));
 		
-//		findSortedSequence (�to be or not to be�) -> "not to"
+//		findSortedSequence ("to be or not to be") -> "not to"
 		assertEquals("not to", StringUtils.findSortedSequence("to be or not to be"));
 		
-//		findSortedSequence ("my mind is an empty zoo�) -> "an empty zoo"
+//		findSortedSequence ("my mind is an empty zoo") -> "an empty zoo"
 		assertEquals("an empty zoo", StringUtils.findSortedSequence("my mind is an empty zoo"));
 		
 //		findSortedSequence ("") -> ""
