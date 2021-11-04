@@ -14,10 +14,10 @@ public class StringUtilsTest {
 		assertEquals("", StringUtils.findSortedSequence(""));
 		assertEquals("", StringUtils.findSortedSequence("   "));
 		
-//		findSortedSequence (“to be or not to be”) -> "not to"
+//		findSortedSequence (ï¿½to be or not to beï¿½) -> "not to"
 		assertEquals("not to", StringUtils.findSortedSequence("to be or not to be"));
 		
-//		findSortedSequence ("my mind is an empty zoo”) -> "an empty zoo"
+//		findSortedSequence ("my mind is an empty zooï¿½) -> "an empty zoo"
 		assertEquals("an empty zoo", StringUtils.findSortedSequence("my mind is an empty zoo"));
 		
 //		findSortedSequence ("") -> ""
@@ -31,6 +31,17 @@ public class StringUtilsTest {
 		
 //		findSortedSequence ("art act") -> "act"
 		assertEquals("act", StringUtils.findSortedSequence("art act"));
+
+
+		assertEquals("a b", StringUtils.findSortedSequence("   c d a b   "));
+		assertEquals("c d e", StringUtils.findSortedSequence("   c d e a b   "));
+		assertEquals("", StringUtils.findSortedSequence(""));
+		assertEquals("", StringUtils.findSortedSequence("      "));
+		assertEquals("z", StringUtils.findSortedSequence("   z   "));
+		assertEquals("a", StringUtils.findSortedSequence("   z a   "));
+		assertEquals("a b b c", StringUtils.findSortedSequence("   z a b b c a   "));
+		assertEquals("b c", StringUtils.findSortedSequence("   z a bd b c a   "));
+		assertEquals("a b bd c", StringUtils.findSortedSequence("   z a b bd c a   "));
 	}
 
 	@Test

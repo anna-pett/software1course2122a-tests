@@ -8,10 +8,10 @@ public static void testFindSortedSequence() {
 		System.out.println("".equals(StringUtils.findSortedSequence("")));
 		System.out.println("".equals(StringUtils.findSortedSequence("   ")));
 		
-//		findSortedSequence (“to be or not to be”) -> "not to"
+//		findSortedSequence (ï¿½to be or not to beï¿½) -> "not to"
 		System.out.println("not to".equals(StringUtils.findSortedSequence("to be or not to be")));
 		
-//		findSortedSequence ("my mind is an empty zoo”) -> "an empty zoo"
+//		findSortedSequence ("my mind is an empty zooï¿½) -> "an empty zoo"
 		System.out.println("an empty zoo".equals(StringUtils.findSortedSequence("my mind is an empty zoo")));
 		
 //		findSortedSequence ("") -> ""
@@ -25,6 +25,17 @@ public static void testFindSortedSequence() {
 		
 //		findSortedSequence ("art act") -> "act"
 		System.out.println("act".equals(StringUtils.findSortedSequence("art act")));
+
+
+		System.out.println("a b".equals(StringUtils.findSortedSequence("   c d a b   ")));
+		System.out.println("c d e".equals(StringUtils.findSortedSequence("   c d e a b   ")));
+		System.out.println("".equals(StringUtils.findSortedSequence("")));
+		System.out.println("".equals(StringUtils.findSortedSequence("      ")));
+		System.out.println("z".equals(StringUtils.findSortedSequence("   z   ")));
+		System.out.println("a".equals(StringUtils.findSortedSequence("   z a   ")));
+		System.out.println("a b b c".equals(StringUtils.findSortedSequence("   z a b b c a   ")));
+		System.out.println("b c".equals(StringUtils.findSortedSequence("   z a bd b c a   ")));
+		System.out.println("a b bd c".equals(StringUtils.findSortedSequence("   z a b bd c a   ")));
 	}
 
 

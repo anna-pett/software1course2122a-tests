@@ -157,6 +157,21 @@ public class ArrayUtilsTestNoJunit {
 		adjMatrix = new int[][]{{0,0,0}, {0,0,1}, {0,1,0}};
 		System.out.println(-1 == ArrayUtils.findShortestPath(adjMatrix, 2, 0));
 		
+
+		System.out.println(3 == ArrayUtils.findShortestPath(new int[][] { { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 }, { 0, 0, 0, 0 } }, 0, 3));
+		System.out.println(-1 == ArrayUtils.findShortestPath(new int[][] { { 0, 1, 1, 0 }, { 1, 0, 1, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 } }, 0, 3));
+		System.out.println(-1 == ArrayUtils.findShortestPath(new int[][] { { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 1, 0, 0, 0 }, { 0, 0, 0, 0 } }, 0, 3));
+		System.out.println(2 == ArrayUtils.findShortestPath(new int[][] {
+			{ 0, 1, 1, 1, 0 },
+			{ 0, 0, 0, 1, 0 },
+			{ 0, 0, 0, 0, 1 },
+			{ 0, 0, 0, 1, 0 },
+			{ 0, 0, 0, 0, 0 },
+		}, 0, 4));
+		System.out.println(3 == ArrayUtils.findShortestPath(new int[][] {{0,1,0,1,0},{1,0,1,1,0},{1,0,0,0,1},{1,1,1,1,0},{0,0,0,0,0}}, 0, 4));
+		System.out.println(2 == ArrayUtils.findShortestPath(new int[][] {{0,1,0,1,0},{1,0,1,1,0},{1,0,0,0,1},{1,1,1,1,1},{0,0,0,0,0}}, 0, 4));
+		System.out.println(4 == ArrayUtils.findShortestPath(new int[][] {{0,0,0,1,0},{1,0,1,1,1},{1,1,0,0,0},{1,0,1,0,0},{0,0,0,0,0}}, 0, 4));
+		System.out.println(-1 == ArrayUtils.findShortestPath(new int[][] {{0,1,1,0},{1,0,1,0},{1,1,0,0},{0,1,0,0}}, 0, 3));
 	}
 	
 
