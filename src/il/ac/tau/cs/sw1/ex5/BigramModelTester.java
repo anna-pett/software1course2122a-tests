@@ -20,7 +20,7 @@ public class BigramModelTester {
 	
 	private static final String LEGAL_WORDS_TEST_FILENAME = "resources/hw5/legal_words_test.txt";
 	private static final String WALRUS_FILENAME = "resources/hw5/walrus.txt";
-	private static final String WALRUS_MODEL_DIR = "resources/hw5/walrus";
+	private static final String WALRUS_MODEL_DIR = "resources/hw5/walrus_model";
 	private static final String CORNER_CASE1_FILENAME = "resources/hw5/corner_case1.txt";
 	private static final String CORNER_CASE2_FILENAME = "resources/hw5/corner_case2.txt";
 	private static final String CORNER_CASE3_FILENAME = "resources/hw5/corner_case3.txt";
