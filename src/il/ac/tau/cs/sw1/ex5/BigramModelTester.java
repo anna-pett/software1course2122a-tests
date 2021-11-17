@@ -21,6 +21,7 @@ public class BigramModelTester {
 	private static final String LEGAL_WORDS_TEST_FILENAME = "resources/hw5/legal_words_test.txt";
 	private static final String WALRUS_FILENAME = "resources/hw5/walrus.txt";
 	private static final String WALRUS_MODEL_DIR = "resources/hw5/walrus_model";
+	private static final String CORNER_CASE0_FILENAME = "resources/hw5/corner_case0.txt";
 	private static final String CORNER_CASE1_FILENAME = "resources/hw5/corner_case1.txt";
 	private static final String CORNER_CASE2_FILENAME = "resources/hw5/corner_case2.txt";
 	private static final String CORNER_CASE3_FILENAME = "resources/hw5/corner_case3.txt";
@@ -245,13 +246,22 @@ public class BigramModelTester {
 		}
 		
 		
+		sG.initModel(CORNER_CASE0_FILENAME);		// " word "
+		if (!Arrays.equals(sG.mVocabulary, new String[]{"word"})){
+			System.out.println("Error corner_case_0.1");
+		}
+		if (!sG.getClosestWord("word").equals("word")){
+			System.out.println("Error corner_case_0.2");
+		}
 		
-		sG.initModel(CORNER_CASE1_FILENAME);
+		
+		sG.initModel(CORNER_CASE1_FILENAME);		// "word"
 		if (!sG.getClosestWord("word").equals("word")){
 			System.out.println("Error corner_case_1.1");
 		}
 		
-		sG.initModel(CORNER_CASE2_FILENAME);
+		
+		sG.initModel(CORNER_CASE2_FILENAME);		// "word\nword1"
 		if (!sG.getClosestWord("word").equals("word1")){
 			System.out.println("Error corner_case_2.1");
 		}
@@ -259,7 +269,8 @@ public class BigramModelTester {
 			System.out.println("Error corner_case_2.2");
 		}
 		
-		sG.initModel(CORNER_CASE3_FILENAME);
+		
+		sG.initModel(CORNER_CASE3_FILENAME);		// "word word1\nword2"
 		if (!sG.getClosestWord("word").equals("word1")){
 			System.out.println("Error corner_case_3.1");
 		}
@@ -335,9 +346,36 @@ public class BigramModelTester {
 		if (sG.isLegalSentence("word1 word")){
 			System.out.println("Error corner_case_3.22");
 		}
+		if (sG.isLegalSentence(" ")){
+			System.out.println("Error corner_case_3.23");
+		}
+		if (sG.isLegalSentence("  ")){
+			System.out.println("Error corner_case_3.24");
+		}
+		if (sG.isLegalSentence("   ")){
+			System.out.println("Error corner_case_3.25");
+		}
+		if (sG.isLegalSentence(" word")){
+			System.out.println("Error corner_case_3.26");
+		}
+		if (sG.isLegalSentence("word ")){
+			System.out.println("Error corner_case_3.27");
+		}
+		if (sG.isLegalSentence(" word ")){
+			System.out.println("Error corner_case_3.28");
+		}
+		if (sG.isLegalSentence(" word word1")){
+			System.out.println("Error corner_case_3.29");
+		}
+		if (sG.isLegalSentence("word word1 ")){
+			System.out.println("Error corner_case_3.30");
+		}
+		if (sG.isLegalSentence(" word word1 ")){
+			System.out.println("Error corner_case_3.31");
+		}
 		
 		
-		sG.initModel(CORNER_CASE4_FILENAME);
+		sG.initModel(CORNER_CASE4_FILENAME);		// "word word1 word word2"
 		if (!Arrays.equals(sG.mVocabulary, new String[]{"word", "word1", "word2"})){
 			System.out.println("Error corner_case_4.1");
 		}
